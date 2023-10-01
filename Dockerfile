@@ -4,7 +4,7 @@ COPY .my.cnf /.my.cnf
 
 EXPOSE 9104
 
-ENV MYSQLD_EXPORTER_PASSWORD=JTMSqRLFA18n2Mb6j44Q
+ENV MYSQLD_EXPORTER_PASSWORD=$MYSQLPASSWORD
 
 ENTRYPOINT [ "/bin/mysqld_exporter" ]
 CMD        [ "--mysqld.address=containers-us-west-55.railway.app:7258", \
